@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>
+Yokohama Market Map
+</title>
+
+<meta
+ name="viewport"
+ content="width=device-width, initial-scale=1.0"
+/>
+
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+/>
+
+<link
+    rel="stylesheet"
+    href="style.css"
+/>
+
+</head>
+
+<body>
+
+<div id="app">
+
+<!-- top bar -->
+
+<div id="topbar">
+
+    <div id="title-area">
+
+        <div id="title">
+            横浜中古マンション市場
+        </div>
+
+        <div id="subtitle">
+            市場データ分析コンソール
+        </div>
+
+    </div>
+
+</div>
+
+<!-- content -->
+
+<div id="content">
+<div id="filter-toggle">
+  ☰ フィルター
+</div>
+    <!-- sidebar -->
+
+    <div id="filter-panel">
+
+        <div class="sidebar-title">
+            フィルター
+        </div>
+
+        <div class="filter-group">
+
+            <div class="filter-label">
+                エリア
+            </div>
+
+            <select class="filter-select">
+
+                <option>
+                    すべて
+                </option>
+            
+                <option>
+                    aoba
+                </option>
+            
+                <option>
+                    asahi
+                </option>
+            
+                <option>
+                    hodogaya
+                </option>
+            
+                <option>
+                    isogo
+                </option>
+            
+                <option>
+                    izumi
+                </option>
+            
+                <option>
+                    kanagawa
+                </option>
+            
+                <option>
+                    kanazawa
+                </option>
+            
+                <option>
+                    kohoku
+                </option>
+            
+                <option>
+                    konan
+                </option>
+            
+                <option>
+                    midori
+                </option>
+            
+                <option>
+                    minami
+                </option>
+            
+                <option>
+                    naka
+                </option>
+            
+                <option>
+                    nishi
+                </option>
+            
+                <option>
+                    sakae
+                </option>
+            
+                <option>
+                    seya
+                </option>
+            
+                <option>
+                    tsurumi
+                </option>
+            
+                <option>
+                    tsuzuki
+                </option>
+            
+                <option>
+                    totsuka
+                </option>
+            
+            </select>
+
+        </div>
+
+        <div class="filter-group">
+
+            <div class="filter-label">
+                徒歩分数
+            </div>
+
+            <select class="filter-select">
+                
+                <option>
+                    すべて
+                </option>
+
+                <option>
+                    10分以内
+                </option>
+                
+                <option>
+                    15分以内
+                </option>
+                
+            </select>
+
+        </div>
+
+        <div class="filter-group">
+
+            <div class="filter-label">
+                築年数
+            </div>
+
+            <select class="filter-select">
+
+                <option>
+                    すべて
+                </option>
+
+                <option>
+                    築10年以内
+                </option>
+
+                <option>
+                    築20年以内
+                </option>
+
+                <option>
+                    築30年以内
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="filter-group">
+
+            <div class="filter-label">
+                価格
+            </div>
+
+            <select class="filter-select">
+                <option>
+                    すべて
+                </option>
+
+                <option>
+                    3000万円以下
+                </option>
+            
+                <option>
+                    5000万円以下
+                </option>
+            
+                <option>
+                    7000万円以下
+                </option>
+            
+                <option>
+                    1億円以上
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+    <!-- map -->
+
+    <div id="map"></div>
+
+    <!-- legend -->
+
+    <div id="legend">
+
+        <div class="legend-title">
+            割安度スコア
+        </div>
+
+        <div class="legend-row">
+
+            <div
+                class="legend-color"
+                style="
+                    background:#0066ff;
+                ">
+            </div>
+
+            <div>
+                割安
+            </div>
+
+        </div>
+
+        <div class="legend-row">
+
+            <div
+                class="legend-color"
+                style="
+                    background:#ff9900;
+                ">
+            </div>
+
+            <div>
+                普通
+            </div>
+
+        </div>
+
+        <div class="legend-row">
+
+            <div
+                class="legend-color"
+                style="
+                    background:#ff3333;
+                ">
+            </div>
+
+            <div>
+                割高
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<script
+    src="https://unpkg.com/leaflet/dist/leaflet.js">
+</script>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
